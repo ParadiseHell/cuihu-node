@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div.container
+        h2 #{title}
+        hr
+        div.row
+        - for(var i = 0; i < data.currentCount; i ++)
+            div.col-sm-6.col-md-4
+                div(class='thumbnail item-block')
+                    div.caption
+                        h3 #{data.MultiData[i].title}
+                        p 观察时间：#{moment(data.MultiData[i].watchTime).format('YYYY-MM-DD HH:mm')}
+                        p 观察地点：#{data.MultiData[i].watchPlace}
+                        p 观察人：#{data.MultiData[i].watchPerson}
+                        p.result 观察结果：#{data.MultiData[i].watchResult}
+                        hr
+                        p
+                            a(class='btn btn-primary' href='#') 查看详情
+

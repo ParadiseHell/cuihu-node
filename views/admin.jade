@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  div(class='container' id='main')
+    h1 信息录入
+    form(method='POST' action='/admin/add')
+      div(class='form-group')
+        label 标题
+        input(class='form-control' type='text' placeholder='标题' name='title')
+      div(class='form-group')
+        label 生物
+        input(class='form-control' type='text' placeholder='生物' name='speciesName')
+      div(class='form-group')
+        label 生物所处环境
+        input(class='form-control' type='text' placeholder='生物所处环境' name='speciesPlace')
+      div(class='form-group')
+        label 信息写入日期
+        div(class='input-group date' id='write_time_picker')
+          input(type='text' class="form-control" placeholder='请选择信息写入日期' name='writeInfoTime')
+          span(class="input-group-addon")
+            span(class="glyphicon glyphicon-calendar")
+      div(class='form-group')
+        label 观察时间
+        div(class='input-group date' id='watch_time_picker')
+          input(type='text' class="form-control" placeholder='请选择观察时间' name='watchTime')
+          span(class="input-group-addon")
+            span(class="glyphicon glyphicon-calendar")
+      div(class='form-group')
+        label 观察地点
+        input(class='form-control' type='text' placeholder='观察地点' name='watchPlace')
+      div(class='form-group')
+        label 观察结果
+        textarea(class='form-control' placeholder='观察结果' name='watchResult')
+      div(class='form-group')
+        label 观察人员
+        input(class='form-control' type='text' placeholder='观察人员' name='watchPerson')
+      div(class='form-group')
+        label 备注
+        input(class='form-control' type='text' placeholder='备注' name='watchNote')
+      button(class='btn btn-block btn-success') 提交
+
+      script(type="text/javascript").
+        $(function () {
+          $('#write_time_picker').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm'
+          });
+        });
+        $(function () {
+          $('#watch_time_picker').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm'
+          });
+        });
