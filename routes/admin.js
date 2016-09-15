@@ -10,7 +10,7 @@ var storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     var fileFormat = (file.originalname).split(".");
-    cb(null, file.fieldname + '-' + Date.now()+ "." +fileFormat[fileFormat.length - 1]);
+    cb(null, Date.now()+ "." +fileFormat[fileFormat.length - 1]);
   }
 });
 var upload = multer({ storage: storage });
@@ -19,14 +19,14 @@ var upload = multer({ storage: storage });
 router.post('/add', upload.single('speciesPic'),function(req, res, next) {
   cuiHuEntity = req.body;
   cuiHuEntity.speciesPic = req.file.path.split("public\\")[1];
-  console.log(req.file.path.split("public\\"));
+  console.log(req.file);
   console.log(cuiHuEntity);
   mongoose.connect('mongodb://localhost/cuihu');
   var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', function() {
-    var a = new cuiHuModel(cuiHuEntity);
-    a.save(function (err, data) {
+    var model = new cuiHuModel(cuiHuEntity);
+    model.save(function (err, data) {
       if (err) return console.error(err);
       console.log(data);
       res.redirect('/');
@@ -36,7 +36,9 @@ router.post('/add', upload.single('speciesPic'),function(req, res, next) {
 });
 
 router.get('/',function (req,res,next) {
-  res.render('admin');
+  res.render('admin',{
+    title : "翠湖公园信息录入"
+  });
 });
 
 module.exports = router;

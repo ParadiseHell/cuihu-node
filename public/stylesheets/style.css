@@ -7,6 +7,23 @@ a {
   color: #00B7FF;
 }
 
+
+.navbar{
+  border: 0;
+  background-color: #ffffff;
+  margin-bottom: 0;
+}
+.navbar .navbar-header a{
+  font-size: 24px;
+  color: #000000;
+}
+.navbar ul li a{
+  font-size: 18px;
+}
+hr{
+  margin-top: 0;
+}
+
 #main{
   max-width: 600px;
   margin: 0 auto;
@@ -41,6 +58,9 @@ a {
   right: 10px;
 }
 .item-block img{
-  width: 245px !important;
   height:245px !important;
+}
+.detail_main a img{
+  width: 300px !important;
+  height:300px !important;
 }

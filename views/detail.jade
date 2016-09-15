@@ -1,0 +1,34 @@
+//Created by ChengTao on 2016-09-15.
+
+extends layout
+
+block content
+    div.container
+        nav.navbar.navbar-default(role='navigation')
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#') #{title}
+            div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='/') 返回首页
+        hr
+        if (data.isSuccess)
+        div.detail_main.media
+            a(class="media-left" href="/"+data.singleData[0].speciesPic+"")
+                img(src="/"+data.singleData[0].speciesPic+"")
+            div.media-body
+                h3 #{data.singleData[0].title}
+                p 生物 : #{data.singleData[0].speciesName}
+                p 生物所处环境 : #{data.singleData[0].speciesPlace}
+                p 信息写入日期 : #{moment(data.singleData[0].writeInfoTime).format('YYYY-MM-DD HH:mm')}
+                p 观察时间：#{moment(data.singleData[0].watchTime).format('YYYY-MM-DD HH:mm')}
+                p 观察地点：#{data.singleData[0].watchPlace}
+                p 观察人：#{data.singleData[0].watchPerson}
+                p 观察结果：#{data.singleData[0].watchResult}
+                p 备注：#{data.singleData[0].watchNote}
+
