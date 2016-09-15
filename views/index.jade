@@ -6,8 +6,9 @@ block content
         hr
         div.row
         - for(var i = 0; i < data.currentCount; i ++)
-            div.col-sm-6.col-md-4
+            div.col-sm-4.col-md-3
                 div(class='thumbnail item-block')
+                    img(src="/"+data.MultiData[i].speciesPic+"")
                     div.caption
                         h3 #{data.MultiData[i].title}
                         p 观察时间：#{moment(data.MultiData[i].watchTime).format('YYYY-MM-DD HH:mm')}

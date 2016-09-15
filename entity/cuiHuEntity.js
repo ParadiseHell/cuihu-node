@@ -7,7 +7,8 @@ var cuiHuEntity = {
     watchPlace : "" ,
     watchResult : "" ,
     watchPerson : "" ,
-    watchNote : ""
+    watchNote : "",
+    speciesPic : ""
 };
 
 module.exports = cuiHuEntity;
