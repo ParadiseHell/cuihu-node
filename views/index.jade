@@ -16,17 +16,30 @@ block content
                         a(href='/admin') 信息录入
         hr
         div.row
-        - for(var i = 0; i < data.currentCount; i ++)
-            div.col-sm-4.col-md-3
-                div(class='thumbnail item-block')
-                    img(src="/"+data.MultiData[i].speciesPic+"")
-                    div.caption
-                        h3 #{data.MultiData[i].title}
-                        p 观察时间：#{moment(data.MultiData[i].watchTime).format('YYYY-MM-DD HH:mm')}
-                        p 观察地点：#{data.MultiData[i].watchPlace}
-                        p 观察人：#{data.MultiData[i].watchPerson}
-                        p.result 观察结果：#{data.MultiData[i].watchResult}
-                        hr
-                        p
-                            a(class='btn btn-primary' href="/detail/?id="+data.MultiData[i]._id+"") 查看详情
-
+            - for(var i = 0; i < currentCount; i ++)
+                div.col-sm-4.col-md-3
+                    div(class='thumbnail item-block')
+                        img(src="/"+data.MultiData[i].speciesPic+"")
+                        div.caption
+                            h3 #{data.MultiData[i].title}
+                            p 观察时间：#{moment(data.MultiData[i].watchTime).format('YYYY-MM-DD HH:mm')}
+                            p 观察地点：#{data.MultiData[i].watchPlace}
+                            p 观察人：#{data.MultiData[i].watchPerson}
+                            p.result 观察结果：#{data.MultiData[i].watchResult}
+                            hr
+                            p
+                                a(class='btn btn-primary' href="/detail/?id="+data.MultiData[i]._id+"") 查看详情
+        nav
+            ul.pager
+                if (currentIndex > 1)
+                    li
+                        a(href='/?index='+(parseInt(currentIndex)-1)) &larr; 上一页
+                else
+                    li.disabled
+                        a(href='#') &larr; 上一页
+                if (isNext)
+                    li
+                        a(href='/?index='+(parseInt(currentIndex)+1)) 下一页 &rarr;
+                else
+                    li.disabled
+                        a(href='#') 下一页 &rarr;
