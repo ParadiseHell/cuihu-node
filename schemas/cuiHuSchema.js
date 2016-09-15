@@ -8,6 +8,7 @@ var cuiHuSchema = new Schema({
     writeInfoTime : { type : Date, default : Date.now() },
     watchTime : { type : Date, default : Date.now() },
     watchPlace : { type : String, default : "" },
+    speciesPic : {type : String,default : ""},
     watchResult : { type : String, default : "" },
     watchPerson : { type : String , default : "" },
     watchNote : { type : String , default : "" },

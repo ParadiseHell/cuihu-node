@@ -3,7 +3,7 @@ extends layout
 block content
   div(class='container' id='main')
     h1 信息录入
-    form(method='POST' action='/admin/add')
+    form(method='POST' action='/admin/add' enctype="multipart/form-data")
       div(class='form-group')
         label 标题
         input(class='form-control' type='text' placeholder='标题' name='title')
@@ -13,6 +13,9 @@ block content
       div(class='form-group')
         label 生物所处环境
         input(class='form-control' type='text' placeholder='生物所处环境' name='speciesPlace')
+      div(class='form-group')
+        label 图片
+        input(class='form-control' type='file' placeholder='图片' name='speciesPic')
       div(class='form-group')
         label 信息写入日期
         div(class='input-group date' id='write_time_picker')
