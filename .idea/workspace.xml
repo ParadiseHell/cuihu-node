@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4405eb92-c8fd-457c-b12b-8ce1b0385eef" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/detail.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/detail.jade" />
@@ -11,6 +12,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin.jade" afterPath="$PROJECT_DIR$/views/admin.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
+=======
+    <list default="true" id="4405eb92-c8fd-457c-b12b-8ce1b0385eef" name="Default" comment="" />
+>>>>>>> 1b8200eb58ddf81ba5611a1f2bfa2163eb42b45e
     <ignored path="Species.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +33,7 @@
     <favorites_list name="Species" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/admin.js">
@@ -91,6 +96,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+>>>>>>> 1b8200eb58ddf81ba5611a1f2bfa2163eb42b45e
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -352,15 +360,23 @@
       <workItem from="1472022595893" duration="1369000" />
       <workItem from="1472349021087" duration="168000" />
       <workItem from="1472349191436" duration="30565000" />
+<<<<<<< HEAD
       <workItem from="1472450583699" duration="5339000" />
       <workItem from="1473750347501" duration="742000" />
       <workItem from="1473927839375" duration="102000" />
       <workItem from="1473927968868" duration="12641000" />
+=======
+      <workItem from="1472450583699" duration="5634000" />
+>>>>>>> 1b8200eb58ddf81ba5611a1f2bfa2163eb42b45e
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="51244000" />
+=======
+    <option name="totallyTimeSpent" value="38054000" />
+>>>>>>> 1b8200eb58ddf81ba5611a1f2bfa2163eb42b45e
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,9 +389,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15151516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2189394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 1b8200eb58ddf81ba5611a1f2bfa2163eb42b45e
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -414,6 +436,9 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46280992" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -716,6 +741,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
