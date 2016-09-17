@@ -51,7 +51,13 @@ hr{
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.item-block div p a{
+.item-block div p a.left{
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.item-block div p a.right{
   display: block;
   position: absolute;
   bottom: 10px;
@@ -63,4 +69,19 @@ hr{
 .detail_main a img{
   width: 300px !important;
   height:300px !important;
+}
+
+.modal-body{
+  position: relative;
+  overflow: hidden;
+  height: 55px;
+}
+
+.modal-body a.left{
+  position: absolute;
+  left: 5px;
+}
+.modal-body a.right{
+  position: absolute;
+  right: 5px;
 }

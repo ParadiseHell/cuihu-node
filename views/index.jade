@@ -28,18 +28,45 @@ block content
                             p.result 观察结果：#{data.MultiData[i].watchResult}
                             hr
                             p
-                                a(class='btn btn-primary' href="/detail/?id="+data.MultiData[i]._id+"") 查看详情
-        nav
-            ul.pager
-                if (currentIndex > 1)
-                    li
-                        a(href='/?index='+(parseInt(currentIndex)-1)) &larr; 上一页
-                else
-                    li.disabled
-                        a(href='#') &larr; 上一页
-                if (isNext)
-                    li
-                        a(href='/?index='+(parseInt(currentIndex)+1)) 下一页 &rarr;
-                else
-                    li.disabled
-                        a(href='#') 下一页 &rarr;
+                                a(class='btn btn-danger left') 删除
+                                a(class='btn btn-success right' href="/detail/?id="+data.MultiData[i]._id+"") 查看详情
+        if(currentCount != 0)
+            nav
+                ul.pager
+                    if (currentIndex > 1)
+                        li
+                            a(href='/?index='+(parseInt(currentIndex)-1)) &larr; 上一页
+                    else
+                        li.disabled
+                            a(href='#') &larr; 上一页
+                    if (isNext)
+                        li
+                            a(href='/?index='+(parseInt(currentIndex)+1)) 下一页 &rarr;
+                    else
+                        li.disabled
+                            a(href='#') 下一页 &rarr;
+
+        .modal.fade.bs-example-modal-sm#delete(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+            .modal-dialog.modal-sm
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal')
+                            span(aria-hidden='true') ×
+                            span.sr-only Close
+                        h4#mySmallModalLabel.modal-title 确定删除？
+                    .modal-body
+                        a.btn.btn-success.left(role='button') 确定
+                        a.btn.btn-danger.right(role='button') 取消
+
+        .modal.fade.bs-example-modal-sm#mesage(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+            .modal-dialog.modal-sm
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal')
+                            span(aria-hidden='true') ×
+                            span.sr-only Close
+                        h4.modal-title 确定状态
+                    .modal-body
+                        p.message
+
+        script(src='/javascripts/main.js')

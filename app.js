@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var admin = require('./routes/admin');
 var detail = require('./routes/detail');
+var _delete = require('./routes/delete');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.locals.moment = require('moment');
 app.use('/', routes);
 app.use('/admin', admin);
 app.use('/detail',detail);
+app.use('/delete',_delete);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
