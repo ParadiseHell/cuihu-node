@@ -3,10 +3,13 @@
  */
 function deleteItem() {
     $('.caption').find('p a.left').click(function () {
+        var that = $(this).parent().parent();
         $("#delete").modal('show');
         $("#delete").find('a.left').click(function () {
             $("#delete").modal('hide');
-            var url = $('.caption').find('p a.right').attr("href").split('=');
+            console.log(that);
+            console.log(that.html());
+            var url = that.find('p a.right').attr("href").split('=');
             url = url[url.length - 1];
             console.log(url);
             $.get('/delete?id='+url,function (data) {
